@@ -1,8 +1,14 @@
 package com.pavi.Shop.Cart;
 
 
+import java.util.List;
+
+import com.pavi.Shop.product.Productdto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 @Entity
@@ -11,19 +17,8 @@ public class Cart {
     @Id
     private int id;
     private String date;
-   
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public String getDate() {
-        return date;
-    }
-    public void setDate(String date) {
-        this.date = date;
-    }
-  
+
+    @OneToMany
+   private List<Productdto> productdto;
   
 }

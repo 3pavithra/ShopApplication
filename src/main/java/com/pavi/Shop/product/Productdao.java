@@ -1,6 +1,7 @@
 package com.pavi.Shop.product;
 
 import java.util.List;
+import java.util.Optional;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
@@ -28,6 +29,9 @@ public class Productdao {
         Query q = entityManager.createQuery("select a from Productdto a where a.name=?1");
         q.setParameter(1, name);
         return q.getResultList();
+    }
+    public Optional<Productdto> getbyId(int id){
+        return productRepo.findById(id);
     }
 
 }
