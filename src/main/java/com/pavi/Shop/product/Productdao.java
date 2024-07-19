@@ -2,10 +2,8 @@ package com.pavi.Shop.product;
 
 import java.util.List;
 import java.util.Optional;
-
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
