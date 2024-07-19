@@ -12,7 +12,7 @@ public class CartController {
     @Autowired
     private Cartservice cartservice;
 
-    @PostMapping
+    @PostMapping("/save")
     public Cart saveController(@RequestBody Cart cart){
         return cartservice.saveCartservice(cart);
     }
